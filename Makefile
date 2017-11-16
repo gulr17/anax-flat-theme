@@ -39,7 +39,7 @@ VENDORBIN 	= vendor/bin
 NPMBIN		= node_modules/.bin
 
 # LESS and CSS
-LESS 		 	= style.less #style1.less #style2.less
+LESS 		 	= style.less modules.less #style1.less #style2.less
 LESS_MODULES	= modules/
 LESS_OPTIONS 	= --strict-imports --include-path=$(LESS_MODULES)
 CSSLINT_OPTIONS = --quiet
@@ -183,7 +183,14 @@ upgrade-responsive-menu:
 	cp node_modules/desinax-responsive-menu/src/less/responsive-menu.less modules/
 	cp node_modules/desinax-responsive-menu/src/js/responsive-menu.js js/
 
-# target: upgrade			-Upgrade external LESS modules.
+# target: upgrade-vertical-grid	- Upgrade LESS module - desinax-vertical-grid
+.PHONY: upgrade-vertical-grid
+upgrade-vertical-grid:
+	@$(call HELPTEXT,$@)
+	npm update desinax-vertical-grid
+	cp node_modules/desinax-vertical-grid/less/*.less modules/
+
+# target: upgrade			- Upgrade external LESS modules.
 .PHONY: upgrade
-upgrade: upgrade-normalize upgrade-responsive-menu
+upgrade: upgrade-normalize upgrade-responsive-menu upgrade-vertical-grid
 	@$(call HELPTEXT,$@)

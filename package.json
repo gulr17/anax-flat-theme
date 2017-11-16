@@ -10,5 +10,7 @@
         "normalize.css": "^7.0.0",
         "stylelint": "^8.2.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "desinax-vertical-grid": "^1.0.1"
+    }
 }
