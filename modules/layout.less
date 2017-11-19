@@ -1,10 +1,17 @@
-/*
-Gridbased layout - fluid - float
-*/
-@magicNumber: 24px;
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
 .outer-wrap-header{
     background-color: #000;
-
+    min-height: 75px;
 }
 
 .outer-wrap-footer {
@@ -22,12 +29,11 @@ Gridbased layout - fluid - float
     @gridImageHorizon: "../img/grid/horisontal-grid-24.png";
 
     .grid(@gridWidth);
-    html.vgrid & {
+    .route-grid &, html.vgrid & {
         .showGrid(@gridWidth, @gridImageVertical);
     }
-
-    html.hgrid & {
-        .showGrid(@gridWidth, @gridImageHorizon);
+    .route-typography &, html.hgrid & {
+        background-image: url(../img/grid/horisontal-grid-24.png);
     }
 }
 
@@ -49,48 +55,6 @@ Gridbased layout - fluid - float
 .main .has-sidebar {
     width: 67%;
     float: left;
-}
-
-.logo-1 {
-    position: absolute;
-    left: 100px;
-    top: 150px;
-}
-
-.site-logo-text {
-    .column(2);
-}
-
-.navbar2 {
-    .column(10);
-}
-
-.rm-default {
-    border-radius: 40px;
-}
-.footer-column-wrapper {
-    margin-bottom: @magicNumber;
-}
-
-.footer-column-wrapper {
-    .clearfix();
-}
-.footer-column {
-    .column(4);
-}
-
-.site-header {
-    .column(12);
-}
-
-.site-footer {
-    .column(12);
-    color: white;
-    text-align: center;
-
-    a {
-        color: yellow;
-    }
 }
 
 .next-previous {

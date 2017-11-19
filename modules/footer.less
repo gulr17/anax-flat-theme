@@ -5,10 +5,26 @@
 // Footer color
 
 .footer {
+    .column(12);
     background-color: #d4d3d3;
     padding: 1em;
     border-radius: 1em;
     h4 {
         margin: auto;
     }
+}
+
+.footer-column-wrapper {
+    margin-bottom: @magicNumber;
+    .clearfix();
+}
+
+.footer-column {
+    .column(4);
+}
+
+.site-footer {
+    .column(12);
+    color: white;
+    text-align: center;
 }
