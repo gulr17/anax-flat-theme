@@ -1,0 +1,67 @@
+@import url(base.less);
+@import url(typography-defaults.less);
+@import url(typography-font-families.less);
+@import url(typography-mixins.less);
+@import url(typography-sizes.less);
+
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@fontFamilyHeadings:  Monserrat, sans-serif;
+@fontFamilyBody:      Cardo, serif;
+@fontFamilyCode:      @fontFamilyCourier;
+@fontFamilyLogo:      'Pacifico', cursive;
+
+body {
+    .font();
+    .typographyLogo();    
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.outer-wrap-header {
+    padding-top: 15px; 
+    background-color: #F66EC2;
+}
+
+.outer-wrap-flash {
+    background-color: #41A2A8;
+}
+
+.outer-wrap-main {
+    background-color: #8EEFF5;
+}
+
+.outer-wrap-footer {
+    background-color: #332C01;
+}
+
+.outer-wrap-after-main {
+    background-color: #c2b982;
+}
+
+.logo-1 {
+    position: absolute;
+    left: 75px;
+    top: 15px;
+    height: 40%;
+    content:url(../img/cupcake.png);
+}
+
+.footer-column, .site-footer {
+    a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        color: #c2b982;
+    }
+
+    h4 {
+        color: #f66ec3;
+    }
+}

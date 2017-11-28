@@ -1,0 +1,95 @@
+.row {
+    .row();
+}
+
+.navbar2 {
+    display: inline;
+    float: left;
+    .column(12)
+}
+
+.logo-1 {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+
+//Footer
+.footer {
+    .column(12);
+}
+
+.footer-column-wrapper {
+    .clearfix();
+}
+
+.footer-column {
+    .column(4);
+}
+
+.site-footer {
+    .column(12);
+}
+
+.inner-wrap {
+    @gridWidth: 1100px;
+    @gridImageVertical: "../img/grid/grid950x24x30x10-nomargin.png";
+    @gridImageHorizon: "../img/grid/horisontal-grid-24.png";
+
+    .grid(@gridWidth);
+    .route-grid &, html.vgrid & {
+        .showGrid(@gridWidth, @gridImageVertical);
+    }
+    .route-typography &, html.hgrid & {
+        background-image: url(../img/grid/horisontal-grid-24.png);
+    }
+}
+
+.main {
+    .column(12);
+    min-height: 50vh;
+    margin: 20px;
+}
+.block.toc {
+    .column(3)
+}
+
+.sidebar {
+    width: 33%;
+    float: left;
+}
+
+.main .has-sidebar {
+    width: 67%;
+    float: left;
+}
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+    
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+.sidebar-right,
+.sidebar-left {
+  display: inline;
+  float: left;
+  width: 270px;
+  margin: 0 5px;
+}
+.sidebar-right.sidebar-left {
+  display: inline;
+  float: left;
+  width: 230px;
+  margin: 0 5px;
+}
+
+.main.has-sidebar {
+    width: 67%;
+    float: left;
+}
