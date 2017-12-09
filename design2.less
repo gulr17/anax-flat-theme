@@ -1,0 +1,78 @@
+@import url(base.less);
+@import url(typography-defaults.less);
+@import url(typography-font-families.less);
+@import url(typography-mixins.less);
+@import url(typography-sizes.less);
+
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@fontSizeLogo: 8em;
+@fontFamilyHeadings:  Monserrat, sans-serif;
+@fontFamilyBody:      Cardo, serif;
+@fontFamilyCode:      @fontFamilyCourier;
+@fontFamilyLogo:      Monserrat, sans-serif;
+
+body {
+    .font();
+    .typographyLogo();    
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.site-logo-text, .rm-default.rm-desktop {
+    a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-variant-caps: all-small-caps;
+    }
+    a:hover {
+        color: #000;        
+    }
+}
+
+.wrap-all {
+    background-image: url("../img/bgimg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.rm-desktop {
+    a {
+        padding: 10px;
+
+    }
+}
+
+.outer-wrap-header {
+    border: 20px black solid;
+}
+
+.outer-wrap-breadcrumb {
+    border-bottom: 2px black dotted;    
+}
+
+.sidebar-right {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding-left: 20px;
+    border: 1px black solid;
+}
+
+.footer-column, .site-footer {
+    a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
+
+.logo-1 {
+    display: none;
+}
