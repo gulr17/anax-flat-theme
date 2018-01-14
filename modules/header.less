@@ -14,36 +14,41 @@
 
 // Style navbar
 .rm-desktop li {
-    background-color: #d4d3d3;
+    background-color: #42e9e6;
+    .selected {
+        background-color: #41c9db;
+    }
 }
 
-@navbarItemBgColor: #d4d3d3;
 .site-header {
-    .column(12)
-}
-.logo-1 {
-    position: absolute;
-    left: 100px;
-    top: 150px;
+    background-color: #6b8c9e;
+    width: 100%;
+    .column(12, 0)
 }
 
-.site-logo-text-icon img {
-    vertical-align: bottom
+.site-logo {
+    display: inline;
+    img {
+        width: 2.6%;
+        float: left;
+    }
 }
 
 .site-logo-text {
-    display: inline;
-    float: left;
-    box-sizing: border-box;
-    width: 48.95833333%;
-    margin-left: .52083333%;
-    margin-right: .52083333%
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    color: white;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
 }
 
 .navbar2 {
-    display: inline;
-    float: left;
-    .column(12)
+    background-color: rgba(65, 201, 219, 0.5);
+    .column(12);
+    float: right;
+    margin-right: 0;
+    margin-left: 0;
+    width: 96.916667%
 }
 
 .profile {

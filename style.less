@@ -8,14 +8,101 @@
 /** --------------------------------------------------------------
  *  Logo images
  */
-.logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -140px;
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+ 
+ @fontFamilyHeadings:  Montserrat;
+ @fontFamilyBody:      Roboto;
+ @fontFamilyCode:      @fontFamilyCourier;
+ 
+ body {
+     .font();
+     .typographyLogo();    
+     .typographyHeadings();
+     .typographyTextElements();
+     .typographyCodeElements();
+     .typographyListElements();
+     .typographyTableElements();
+     .typographyOtherElements();
+ }
+
+.flash-wrap {
+    background-image: url("img/bew.png");
+    background-color: cadetblue;
+    position: relative;
+    z-index: -10;
 }
 
-.site-logo-text-icon {
-    img {
-        vertical-align: bottom;
+.background-flash {
+    width: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.article {
+    padding: 3%;
+    width: 40%;
+    margin: 0;
+}
+
+.has-sidebar {
+    width: 67%;
+    float: left;
+}
+
+.sidebar {
+    width: 33%;
+    float: left;
+}
+
+.col3 {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    width: 28%;
+    float: left;
+    margin: 10px;
+}
+
+body, .outer-wrap, .footer {
+    @gridWidth: 100%;
+    @gridImageVertical: "../img/grid/grid950x24x30x10-nomargin.png";
+    @gridImageHorizon: "../img/grid/horisontal-grid-24.png";
+
+    .grid(@gridWidth);
+    html.vgrid & {
+        .showGrid(@gridWidth, @gridImageVertical);
     }
+    html.hgrid & {
+        background-image: url(../img/grid/horisontal-grid-24.png);
+    }
+}
+
+.has-sidebar {
+    .next-previous {
+        width: 60%;
+    }
+    .article {
+        width: 60%;
+    }
+    .next {
+        float: right;
+    }
+
+
+    .previous {
+        float: left;
+        margin-right: 100px;
+    }
+}
+
+.blog-list-item {
+    padding-left: 40px;
 }

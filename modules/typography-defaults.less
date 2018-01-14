@@ -13,19 +13,17 @@
 
  .typographyLogo() {
     .site-logo-text, .rm-default.rm-desktop {
-        font-family: @fontFamilyLogo;
+        font-family: @fontFamilyHeadings;
         margin-top: @magicNumber;
         margin-bottom: @magicNumber;
         img {
             margin: 0;
         }
     }
-    .site-logo-text {
-        .fontSize(@fontSizeLogo);
-    }
 
     .rm-default.rm-desktop {
-        .fontSize(@fontSizeH3);
+        .fontSize(@fontSizeH5   );
+        margin: 0;
     }
 }
 
@@ -34,9 +32,16 @@
         font-family: @fontFamilyHeadings;
         margin-top: @magicNumber;
         margin-bottom: @magicNumber;
+        margin-left: @magicNumber;
         img {
             margin: 0;
         }
+    .meta-header {
+        font-family: @fontFamilyHeadings;
+        margin-top: @magicNumber;
+        margin-bottom: @magicNumber;
+        margin-left: @magicNumber;
+    }
     }
 
     h1 {
@@ -91,7 +96,7 @@
         .fontSize(@fontSizeH5);
     }
 
-    h6 {
+    h6, .meta-header {
         .fontSize(@fontSizeH6);
     }
 }
